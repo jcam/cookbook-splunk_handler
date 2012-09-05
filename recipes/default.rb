@@ -20,12 +20,12 @@ if (splunk_params['username'] and splunk_params['password'] and
   chef_handler 'Chef::Handler::Splunk' do
     action :enable
     arguments [
-      :username => splunk_params['username'],
-      :password => splunk_params['password'],
-      :host => splunk_params['host'],
-      :port => splunk_params['port'],
-      :index => splunk_params['index'],
-      :scheme => splunk_params['scheme']
+      username=splunk_params['username'],
+      password=splunk_params['password'],
+      host=splunk_params['host'],
+      port=splunk_params['port'],
+      index=splunk_params['index'],
+      scheme=splunk_params['scheme']
     ]
     source File.join(Gem.all_load_paths.grep(/chef-handler-splunk/).first,
                      'chef', 'handler', 'splunk.rb')
