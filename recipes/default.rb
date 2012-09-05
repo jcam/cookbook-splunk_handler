@@ -8,7 +8,7 @@
 # License:: Apache License 2.0
 
 
-splunk_params = node['chef_handler']['handler']['splunk']
+splunk_params = node['chef_client']['handler']['splunk']
 
 if (splunk_params['username'] and splunk_params['password'] and
     splunk_params['host'])
