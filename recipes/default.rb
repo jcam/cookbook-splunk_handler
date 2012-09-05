@@ -17,7 +17,7 @@ if (splunk_params['username'] and splunk_params['password'] and
 
   chef_gem 'chef-handler-splunk'
 
-  chef_handler 'Chef::Handler::Splunk' do
+  chef_handler 'Chef::Handler::SplunkHandler' do
     action :enable
     arguments [
       username=splunk_params['username'],
