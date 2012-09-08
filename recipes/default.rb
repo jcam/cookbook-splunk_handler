@@ -16,7 +16,9 @@ if (splunk_params['username'] and splunk_params['password'] and
 
   include_recipe 'chef_handler'
 
-  chef_gem 'chef-handler-splunk'
+  chef_gem 'chef-handler-splunk' do
+    version '2.0.0'
+  end
 
   chef_handler 'Chef::Handler::SplunkHandler' do
     action :enable
