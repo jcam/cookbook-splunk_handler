@@ -1,20 +1,17 @@
 Description
 ===========
+Cookbook version of the Chef Exception & Reporting Handler for Splunk.
 
 [![Build Status](https://secure.travis-ci.org/ampledata/cookbook-splunk_handler.png?branch=master)](http://travis-ci.org/ampledata/cookbook-splunk_handler)
-
-Cookbook version of the Chef Exception & Reporting Handler for Splunk.
 
 
 Requirements
 ============
-
 The `chef_handler` cookbook.
 
 
 Attributes
 ==========
-
 This cookbook uses the following attributes to configure how it is installed.
 
 Required Attributes
@@ -35,11 +32,14 @@ Optional Attributes
 
 Usage
 =====
-
-# Set at least the `username`, `password` and `host` Attributes on a
+1. Set at least the `username`, `password` and `host` Attributes on a
   Node.
-# Add the `splunk_handler` Cookbook to a Node's Run List.
+2. Add the `splunk_handler` Cookbook to a Node's Run List.
 
+
+Source
+======
+https://github.com/ampledata/cookbook-splunk_handler
 
 Author
 ======
@@ -51,8 +51,10 @@ Credits
 The splunk_handler Cookbook is based on the graphite_handler Cookbook
 written by Peter Donald.
 
-
 Copyright
 =========
-
 Copyright 2012 Splunk, Inc.
+
+License
+=======
+Apache License 2.0. See LICENSE.txt
