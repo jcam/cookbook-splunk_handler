@@ -43,7 +43,7 @@ https://github.com/ampledata/cookbook-splunk_handler
 
 Author
 ======
-Author:: Greg Albrecht (<mailto:gba@splunk.com>) for splunk_handler.
+Author:: Greg Albrecht (mailto:gba@splunk.com) for splunk_handler.
 Author:: Peter Donald for graphite_handler.
 
 Credits
