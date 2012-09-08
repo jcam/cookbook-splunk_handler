@@ -10,7 +10,12 @@
 GIT_TAG=`git describe --abbrev=0 --tags`
 
 
-build:
+publish:
+	rsync -a --exclude-from=.tar_exclude . ../splunk_handler
+	knife cookbook site share splunk_handler 'Monitoring & Trending' -o ../
+	rm -rf ../splunk_handler
+
+build_tarball:
 	rsync -a --exclude-from=.tar_exclude . ../splunk_handler
 	tar -zcpf splunk_handler-$(GIT_TAG).tar.gz ../splunk_handler
 	rm -rf ../splunk_handler
