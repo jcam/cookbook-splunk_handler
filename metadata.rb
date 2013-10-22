@@ -1,8 +1,8 @@
 name 'splunk_handler'
-version '1.2.0'
+version '2.5.0'
 
-maintainer 'Greg Albrecht'
-maintainer_email 'gba@splunk.com'
+maintainer 'Jesse Campbell'
+maintainer_email 'hikeit@gmail.com'
 license 'Apache License 2.0'
 
 description 'Installs/Configures the Chef Exception & Reporting Handler for Splunk.'

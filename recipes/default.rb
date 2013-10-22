@@ -16,12 +16,13 @@ if (splunk_params['username'] and splunk_params['password'] and
 
   include_recipe 'chef_handler'
 
-  chef_gem 'chef-handler-splunk' do
-    version '2.1.0'
-  end
+  cookbook_file File.join(node['chef_handler']['handler_path'], 'splunk.rb') do
+    source "splunk.rb"
+    action :nothing
+  end.run_action(:create)
 
   chef_handler 'Chef::Handler::SplunkHandler' do
-    action :enable
+    action :nothing
     arguments [
       username=splunk_params['username'],
       password=splunk_params['password'],
@@ -30,7 +31,6 @@ if (splunk_params['username'] and splunk_params['password'] and
       index=splunk_params['index'],
       scheme=splunk_params['scheme']
     ]
-    source File.join(Gem.all_load_paths.grep(/chef-handler-splunk/).first,
-                     'chef', 'handler', 'splunk.rb')
-  end
+    source File.join(node['chef_handler']['handler_path'], 'splunk.rb')
+  end.run_action(:enable)
 end
